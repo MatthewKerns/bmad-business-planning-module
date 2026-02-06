@@ -1,0 +1,39 @@
+name: bmad-business-planning
+version: 1.0.0
+description: Professional business planning and process mapping agents for strategic documentation
+author: AI Agency Development OS Team
+category: business-strategy
+
+agents:
+  - id: business-plan-architect
+    name: Business Plan Architect
+    description: Creates comprehensive business plans using proven frameworks
+    path: agents/business-plan-architect.md
+    config: config/cis-business-plan-architect.customize.yaml
+
+  - id: process-mapper
+    name: Process Mapper
+    description: Maps and documents business processes systematically
+    path: agents/process-mapper.md
+    config: config/cis-process-mapper.customize.yaml
+
+workflows:
+  - id: business-plan
+    name: Business Plan Creation
+    description: Guided business plan development through 10 strategic tiers
+    path: workflows/business-plan/
+    command: bmad:business-planning:workflows:business-plan
+
+  - id: process-mapping
+    name: Process Mapping
+    description: Systematic process documentation and optimization
+    path: workflows/process-mapping/
+    command: bmad:business-planning:workflows:process-mapping
+
+dependencies:
+  bmad-core: ">=1.0.0"
+
+installation:
+  target_directory: "_bmad/business-planning"
+  register_agents: true
+  register_workflows: true

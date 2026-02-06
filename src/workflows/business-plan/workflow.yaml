@@ -1,0 +1,27 @@
+# Business Plan Workflow Configuration
+name: "business-plan"
+description: "Build a comprehensive three-tiered business plan through guided collaborative discovery. Tier 1: Messaging Foundation (mission, vision, social impact, avatar, pain points). Tier 2: The Meat (marketing plan, SWOT, competitive analysis, operations, SOPs, org chart). Tier 3: Forward Thinking (financial projections, exit strategy, expansion, contingency). Designed for AI agencies and small businesses."
+author: "Arise Group"
+
+# Critical variables load from config_source
+config_source: "{project-root}/_bmad/cis/config.yaml"
+output_folder: "{config_source}:output_folder"
+user_name: "{config_source}:user_name"
+communication_language: "{config_source}:communication_language"
+date: system-generated
+
+# Context can be provided via data attribute when invoking
+# Example: data="{path}/existing-docs.md" provides existing business context
+
+# Module path and component files
+installed_path: "{project-root}/_bmad/cis/workflows/business-plan"
+template: "{installed_path}/template.md"
+instructions: "{installed_path}/instructions.md"
+
+# Required Data Files
+business_plan_frameworks: "{installed_path}/business-plan-frameworks.csv"
+
+# Output configuration
+default_output_file: "{output_folder}/business-plan-{{date}}.md"
+
+standalone: true

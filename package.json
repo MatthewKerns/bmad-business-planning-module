@@ -1,0 +1,31 @@
+{
+  "name": "bmad-business-planning",
+  "version": "1.0.0",
+  "description": "BMAD Business Planning Module - Professional business plan and process mapping agents",
+  "main": "src/module.yaml",
+  "scripts": {
+    "release": "npm version patch && git push --tags",
+    "test": "echo \"No tests configured\""
+  },
+  "keywords": [
+    "bmad",
+    "business-planning",
+    "process-mapping",
+    "strategic-planning",
+    "business-strategy",
+    "agency-tools"
+  ],
+  "author": "AI Agency Development OS Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/bmad-business-planning-module.git"
+  },
+  "bugs": {
+    "url": "https://github.com/YOUR_GITHUB_USERNAME/bmad-business-planning-module/issues"
+  },
+  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/bmad-business-planning-module#readme",
+  "peerDependencies": {
+    "bmad-method": ">=1.0.0"
+  }
+}
