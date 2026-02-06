@@ -41,8 +41,8 @@ npx bmad-method@alpha install bmad-business-planning
 
 1. Clone this repository:
 ```bash
-cd ~/workspace/agency-operations
-git clone https://github.com/YOUR_USERNAME/bmad-business-planning-module.git
+cd ~/workspace
+git clone https://github.com/MatthewKerns/bmad-business-planning-module.git
 ```
 
 2. Copy the module files to your BMAD installation:

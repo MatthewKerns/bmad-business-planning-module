@@ -19,12 +19,12 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YOUR_GITHUB_USERNAME/bmad-business-planning-module.git"
+    "url": "git+https://github.com/MatthewKerns/bmad-business-planning-module.git"
   },
   "bugs": {
-    "url": "https://github.com/YOUR_GITHUB_USERNAME/bmad-business-planning-module/issues"
+    "url": "https://github.com/MatthewKerns/bmad-business-planning-module/issues"
   },
-  "homepage": "https://github.com/YOUR_GITHUB_USERNAME/bmad-business-planning-module#readme",
+  "homepage": "https://github.com/MatthewKerns/bmad-business-planning-module#readme",
   "peerDependencies": {
     "bmad-method": ">=1.0.0"
   }
