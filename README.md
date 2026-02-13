@@ -4,10 +4,11 @@ Professional business planning and process mapping agents for strategic document
 
 ## 🎯 Overview
 
-This BMAD module provides two specialized agents designed to help businesses and agencies create comprehensive strategic documentation:
+This BMAD module provides three specialized agents designed to help businesses and agencies create comprehensive strategic documentation:
 
 - **Business Plan Architect** - Creates structured business plans using proven frameworks
 - **Process Mapper** - Documents and optimizes business processes systematically
+- **Scope & Timeline Builder** - Generates accurate project estimates through systematic breakdown and iterative refinement
 
 ## ✨ Features
 
@@ -25,6 +26,15 @@ This BMAD module provides two specialized agents designed to help businesses and
 - Bottleneck identification
 - Optimization recommendations
 - Multiple process categories (operational, customer, financial, etc.)
+
+### Scope & Timeline Builder
+- Interactive project estimation workflow
+- Work Breakdown Structure (WBS) methodology
+- Three-point estimation (optimistic, most likely, pessimistic)
+- Dependency mapping and critical path analysis
+- Risk assessment with buffer recommendations
+- Generates comprehensive proposals with timelines
+- Supports iterative refinement through probing questions
 
 ## 📦 Installation
 
@@ -63,12 +73,14 @@ Add to `_bmad/_config/agent-manifest.csv`:
 ```csv
 business-planning,business-plan-architect,Business Plan Architect,Creates comprehensive business plans
 business-planning,process-mapper,Process Mapper,Maps business processes systematically
+business-planning,scope-timeline-builder,Scope & Timeline Builder,Interactive project estimation
 ```
 
 Add to `_bmad/_config/workflow-manifest.csv`:
 ```csv
 business-planning,business-plan,Business Plan Creation,10-tier strategic planning
 business-planning,process-mapping,Process Mapping,Systematic process documentation
+business-planning,project-estimation,Project Estimation,Interactive project breakdown and timeline generation
 ```
 
 4. Copy the configuration files:
@@ -103,6 +115,18 @@ Include in your party configuration to have the architect participate in strateg
 2. **Via workflow:**
 ```
 /bmad:business-planning:workflows:process-mapping
+```
+
+### Using the Scope & Timeline Builder
+
+1. **Via Skill command:**
+```
+/bmad:business-planning:agents:scope-timeline-builder
+```
+
+2. **Via workflow:**
+```
+/bmad:business-planning:workflows:project-estimation
 ```
 
 ## 📖 Example Use Cases
@@ -142,6 +166,27 @@ The mapper will help you document:
 - Tools and resources needed
 - Performance metrics
 
+### Creating Project Estimates
+Perfect for:
+- Scoping new projects or features
+- Creating proposals for clients
+- Sprint planning and backlog refinement
+- Resource allocation and capacity planning
+- Setting stakeholder expectations
+- Identifying project risks early
+
+The builder will guide you through:
+1. Project context and constraints
+2. Component identification (features, infrastructure, non-technical work)
+3. Systematic breakdown (WBS methodology)
+4. Time estimation with three-point estimates
+5. Estimate refinement through probing questions
+6. Dependency mapping and critical path analysis
+7. Risk assessment and buffer recommendations
+8. Timeline generation with milestones
+9. Assumption and constraint documentation
+10. Executive summary and next steps
+
 ## 🏗️ Module Structure
 
 ```
@@ -150,21 +195,27 @@ bmad-business-planning-module/
 │   ├── module.yaml                    # Module configuration
 │   ├── agents/
 │   │   ├── business-plan-architect.md # Agent definition
-│   │   └── process-mapper.md          # Agent definition
+│   │   ├── process-mapper.md          # Agent definition
+│   │   └── scope-timeline-builder.md  # Agent definition
 │   ├── workflows/
 │   │   ├── business-plan/
 │   │   │   ├── instructions.md        # Workflow instructions
 │   │   │   ├── template.md            # Output template
 │   │   │   ├── workflow.yaml          # Workflow config
 │   │   │   └── business-plan-frameworks.csv
-│   │   └── process-mapping/
-│   │       ├── instructions.md
-│   │       ├── template.md
-│   │       ├── workflow.yaml
-│   │       └── process-categories.csv
+│   │   ├── process-mapping/
+│   │   │   ├── instructions.md
+│   │   │   ├── template.md
+│   │   │   ├── workflow.yaml
+│   │   │   └── process-categories.csv
+│   │   └── project-estimation/
+│   │       ├── instructions.md        # Estimation workflow steps
+│   │       ├── template.md            # Project estimate template
+│   │       └── workflow.yaml          # Workflow config
 │   └── config/
 │       ├── cis-business-plan-architect.customize.yaml
-│       └── cis-process-mapper.customize.yaml
+│       ├── cis-process-mapper.customize.yaml
+│       └── cis-scope-timeline-builder.customize.yaml
 ├── package.json
 └── README.md
 ```
@@ -188,6 +239,14 @@ For issues or questions:
 - Contact the AI Agency Development OS Team
 
 ## 🔄 Version History
+
+### v1.1.0 (2025-02-13)
+- Added Scope & Timeline Builder agent
+- Interactive project estimation workflow
+- Work Breakdown Structure (WBS) methodology
+- Three-point estimation with confidence levels
+- Dependency mapping and critical path analysis
+- Risk assessment and buffer recommendations
 
 ### v1.0.0 (2024-02-05)
 - Initial release

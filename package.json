@@ -1,6 +1,6 @@
 {
   "name": "bmad-business-planning",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "BMAD Business Planning Module - Professional business plan and process mapping agents",
   "main": "src/module.yaml",
   "scripts": {

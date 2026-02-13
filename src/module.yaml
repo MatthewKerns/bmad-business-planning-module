@@ -17,6 +17,12 @@ agents:
     path: agents/process-mapper.md
     config: config/cis-process-mapper.customize.yaml
 
+  - id: scope-timeline-builder
+    name: Scope & Timeline Builder
+    description: Interactive project estimation and proposal generation
+    path: agents/scope-timeline-builder.md
+    config: config/cis-scope-timeline-builder.customize.yaml
+
 workflows:
   - id: business-plan
     name: Business Plan Creation
@@ -29,6 +35,12 @@ workflows:
     description: Systematic process documentation and optimization
     path: workflows/process-mapping/
     command: bmad:business-planning:workflows:process-mapping
+
+  - id: project-estimation
+    name: Project Estimation
+    description: Guided project breakdown and timeline creation
+    path: workflows/project-estimation/
+    command: bmad:business-planning:workflows:project-estimation
 
 dependencies:
   bmad-core: ">=1.0.0"
