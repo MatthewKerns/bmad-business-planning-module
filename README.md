@@ -6,13 +6,13 @@ Professional business planning and process mapping agents for strategic document
 
 This BMAD module provides three specialized agents designed to help businesses and agencies create comprehensive strategic documentation:
 
-- **Business Plan Architect** - Creates structured business plans using proven frameworks
-- **Process Mapper** - Documents and optimizes business processes systematically
-- **Scope & Timeline Builder** - Generates accurate project estimates through systematic breakdown and iterative refinement
+- **Business Plan Architect (Katrod)** - Creates structured business plans using proven frameworks
+- **Process Mapper (Atlas)** - Documents and optimizes business processes systematically
+- **Scope & Timeline Builder (Taylor)** - Generates accurate project estimates through systematic breakdown and iterative refinement
 
 ## ✨ Features
 
-### Business Plan Architect
+### Business Plan Architect (Katrod)
 - 10-tier business planning methodology
 - Pulls scattered ideas into structured documentation
 - Uses frameworks like Business Model Canvas, Blue Ocean Strategy, Jobs-to-be-Done
@@ -20,14 +20,14 @@ This BMAD module provides three specialized agents designed to help businesses a
 - Prioritizes based on current business stage
 - Integrates existing materials and identifies gaps
 
-### Process Mapper
+### Process Mapper (Atlas)
 - Systematic process documentation
 - Visual and written process mapping
 - Bottleneck identification
 - Optimization recommendations
 - Multiple process categories (operational, customer, financial, etc.)
 
-### Scope & Timeline Builder
+### Scope & Timeline Builder (Taylor)
 - Interactive project estimation workflow
 - Work Breakdown Structure (WBS) methodology
 - Three-point estimation (optimistic, most likely, pessimistic)
@@ -71,9 +71,9 @@ cp -r ~/workspace/agency-operations/bmad-business-planning-module/src/* _bmad/bu
 
 Add to `_bmad/_config/agent-manifest.csv`:
 ```csv
-business-planning,business-plan-architect,Business Plan Architect,Creates comprehensive business plans
-business-planning,process-mapper,Process Mapper,Maps business processes systematically
-business-planning,scope-timeline-builder,Scope & Timeline Builder,Interactive project estimation
+business-planning,business-plan-architect,Business Plan Architect (Katrod),Creates comprehensive business plans
+business-planning,process-mapper,Process Mapper (Atlas),Maps business processes systematically
+business-planning,scope-timeline-builder,Scope & Timeline Builder (Taylor),Interactive project estimation
 ```
 
 Add to `_bmad/_config/workflow-manifest.csv`:
@@ -90,7 +90,7 @@ cp _bmad/business-planning/config/*.yaml _bmad/_config/agents/
 
 ## 🚀 Usage
 
-### Using the Business Plan Architect
+### Using the Business Plan Architect (Katrod)
 
 1. **Via Skill command:**
 ```
@@ -105,7 +105,7 @@ Include in your party configuration to have the architect participate in strateg
 /bmad:business-planning:workflows:business-plan
 ```
 
-### Using the Process Mapper
+### Using the Process Mapper (Atlas)
 
 1. **Via Skill command:**
 ```
@@ -117,7 +117,7 @@ Include in your party configuration to have the architect participate in strateg
 /bmad:business-planning:workflows:process-mapping
 ```
 
-### Using the Scope & Timeline Builder
+### Using the Scope & Timeline Builder (Taylor)
 
 1. **Via Skill command:**
 ```
@@ -250,8 +250,8 @@ For issues or questions:
 
 ### v1.0.0 (2024-02-05)
 - Initial release
-- Business Plan Architect agent
-- Process Mapper agent
+- Business Plan Architect (Katrod) agent
+- Process Mapper (Atlas) agent
 - Complete workflow implementations
 - Framework CSV files for guided planning
 
